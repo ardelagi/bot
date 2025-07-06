@@ -67,7 +67,7 @@ module.exports = {
   },
   slashCommand: {
     enabled: true,
-    ephemeral: false,
+    ephemeral: true,
     options: [],
   },
   messageRun: (message, args, data) => {},

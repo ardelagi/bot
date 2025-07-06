@@ -1,16 +1,20 @@
 module.exports = {
-  OWNER_IDS: [""], // Bot owner ID's
-  SUPPORT_SERVER: "", // Your bot support server
+  OWNER_IDS: ["729602261508161636"],
+
+  SUPPORT_SERVER: "https://discord.gg/motionliferoleplay",
+
   PREFIX_COMMANDS: {
-    ENABLED: true, // Enable/Disable prefix commands
-    DEFAULT_PREFIX: "!", // Default prefix for the bot
+    ENABLED: true,
+    DEFAULT_PREFIX: "!",
   },
+
   INTERACTIONS: {
-    SLASH: false, // Should the interactions be enabled
-    CONTEXT: false, // Should contexts be enabled
-    GLOBAL: false, // Should the interactions be registered globally
-    TEST_GUILD_ID: "xxxxxxxxxxx", // Guild ID where the interactions should be registered. [** Test you commands here first **]
+    SLASH: true,
+    CONTEXT: true,
+    GLOBAL: false,
+    TEST_GUILD_ID: "1383040700400013403",
   },
+
   EMBED_COLORS: {
     BOT_EMBED: "#068ADD",
     TRANSPARENT: "#36393F",
@@ -18,11 +22,13 @@ module.exports = {
     ERROR: "#D61A3C",
     WARNING: "#F7E919",
   },
+
   CACHE_SIZE: {
     GUILDS: 100,
-    USERS: 10000,
-    MEMBERS: 10000,
+    USERS: 50000,
+    MEMBERS: 50000,
   },
+
   MESSAGES: {
     API_ERROR: "Unexpected Backend Error! Try again later or contact support server",
   },
@@ -36,37 +42,35 @@ module.exports = {
   },
 
   DASHBOARD: {
-    enabled: false, // enable or disable dashboard
-    baseURL: "http://localhost:8080", // base url
-    failureURL: "http://localhost:8080", // failure redirect url
-    port: "8080", // port to run the bot on
+    enabled: false,
+    baseURL: "http://localhost:8080",
+    failureURL: "http://localhost:8080",
+    port: "8080",
   },
 
   ECONOMY: {
     ENABLED: false,
     CURRENCY: "₪",
-    DAILY_COINS: 100, // coins to be received by daily command
-    MIN_BEG_AMOUNT: 100, // minimum coins to be received when beg command is used
-    MAX_BEG_AMOUNT: 2500, // maximum coins to be received when beg command is used
+    DAILY_COINS: 100,
+    MIN_BEG_AMOUNT: 100,
+    MAX_BEG_AMOUNT: 2500,
   },
 
-  MUSIC: {
-    ENABLED: false,
-    IDLE_TIME: 60, // Time in seconds before the bot disconnects from an idle voice channel
+  MUSIC: { // PERBAIKI: Tambahkan koma di akhir
+    ENABLED: true,
+    IDLE_TIME: 60,
     MAX_SEARCH_RESULTS: 5,
-    DEFAULT_SOURCE: "SC", // YT = Youtube, YTM = Youtube Music, SC = SoundCloud
-    // Add any number of lavalink nodes here
-    // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
+    DEFAULT_SOURCE: "YT",
     LAVALINK_NODES: [
       {
-        host: "localhost",
-        port: 2333,
-        password: "youshallnotpass",
-        id: "Local Node",
-        secure: false,
-      },
+        id: "ajie-node",
+        host: "lava-all.ajieblogs.eu.org",
+        port: 443,
+        password: "https://dsc.gg/ajidevserver",
+        secure: true
+      }
     ],
-  },
+  }, // TAMBAHKAN KOMA DI SINI
 
   GIVEAWAYS: {
     ENABLED: false,
@@ -76,7 +80,7 @@ module.exports = {
   },
 
   IMAGE: {
-    ENABLED: false,
+    ENABLED: true,
     BASE_API: "https://strangeapi.hostz.me/api",
   },
 
@@ -85,8 +89,8 @@ module.exports = {
   },
 
   MODERATION: {
-    ENABLED: false,
-    EMBED_COLORS: {
+    ENABLED: true,
+    COLORS: {
       TIMEOUT: "#102027",
       UNTIMEOUT: "#4B636E",
       KICK: "#FF7961",
@@ -102,22 +106,25 @@ module.exports = {
     },
   },
 
+  ANNOUNCEMENT_CHANNEL_ID: "1391134846880841728",
+  VOICE_CHANNEL_ID: "1391376785463316560",
+  MAX_PLAYERS: 750, 
   PRESENCE: {
-    ENABLED: false, // Whether or not the bot should update its status
-    STATUS: "online", // The bot's status [online, idle, dnd, invisible]
-    TYPE: "WATCHING", // Status type for the bot [ CUSTOM | PLAYING | LISTENING | WATCHING | COMPETING ]
-    // Your bot status message (note: in custom status type you won't have "Playing", "Listening", "Competing" prefix)
-    MESSAGE: ["{members} members in {servers} servers"],
-  },
+    ENABLED: true,
+    STATUS: "online",
+    TYPE: "WATCHING",
+  }, 
+
+
 
   STATS: {
-    ENABLED: false,
-    XP_COOLDOWN: 5, // Cooldown in seconds between messages
+    ENABLED: true,
+    XP_COOLDOWN: 5,
     DEFAULT_LVL_UP_MSG: "{member:tag}, You just advanced to **Level {level}**",
   },
 
   SUGGESTIONS: {
-    ENABLED: false, // Should the suggestion system be enabled
+    ENABLED: false,
     EMOJI: {
       UP_VOTE: "⬆️",
       DOWN_VOTE: "⬇️",
@@ -132,4 +139,4 @@ module.exports = {
     CREATE_EMBED: "#068ADD",
     CLOSE_EMBED: "#068ADD",
   },
-};
+}; // Akhir file

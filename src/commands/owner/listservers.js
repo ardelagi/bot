@@ -17,7 +17,7 @@ module.exports = {
     usage: "[match]",
   },
   slashCommand: {
-    enabled: false,
+    enabled: true,
   },
 
   async messageRun(message, args) {
@@ -125,5 +125,11 @@ module.exports = {
         await sentMsg.edit({ components: [] });
       });
     });
+  },
+  async interactionRun(interaction) {
+    // untuk sementara, jalankan fungsi yang sama dengan messageRun
+    const message = interaction; // alias agar tidak rewrite banyak
+    const args = []; // kosong karena slash tidak pakai args
+    await this.messageRun(message, args);
   },
 };

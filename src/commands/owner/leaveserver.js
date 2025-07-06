@@ -12,7 +12,7 @@ module.exports = {
     usage: "<serverId>",
   },
   slashCommand: {
-    enabled: false,
+    enabled: true,
   },
 
   async messageRun(message, args, data) {
@@ -34,4 +34,16 @@ module.exports = {
       return message.safeReply(`Failed to leave \`${name}\``);
     }
   },
+
+    async interactionRun(interaction, { settings }) {
+  const message = interaction; // agar kode messageRun bisa tetap digunakan
+  const args = []; // slash command tidak punya args
+  const data = {
+    settings,
+    prefix: "/", // fallback prefix untuk slash
+    invoke: this.name, // nama command
+  };
+
+  await this.messageRun(message, args, data);
+}
 };
