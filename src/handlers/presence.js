@@ -38,6 +38,9 @@ async function updatePresence(client) {
       const maxPlayers = config.MAX_PLAYERS;
       playerText = `${onlinePlayers}/${maxPlayers}`;
       state.lastPlayerCount = playerText;
+    } else {
+      // Log jika API mengembalikan format data yang tidak diharapkan
+      console.warn(`[${guildId}] Presence API returned non-array data.`);
     }
   } catch (error) {
     console.error(`[${guildId}] Presence API Error:`, error.message);

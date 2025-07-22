@@ -39,10 +39,10 @@ module.exports = {
     ENABLED: false,
     LOG_EMBED: "#36393F",
     DM_EMBED: "#36393F",
-  },
+  },  
 
   DASHBOARD: {
-    enabled: false,
+    enabled: true,
     baseURL: "http://localhost:8080",
     failureURL: "http://localhost:8080",
     port: "8080",
@@ -108,7 +108,7 @@ module.exports = {
 
   ANNOUNCEMENT_CHANNEL_ID: "1391134846880841728",
   VOICE_CHANNEL_ID: "1391376785463316560",
-  MAX_PLAYERS: 750, 
+  MAX_PLAYERS: 800, 
   PRESENCE: {
     ENABLED: true,
     STATUS: "online",
@@ -139,4 +139,4 @@ module.exports = {
     CREATE_EMBED: "#068ADD",
     CLOSE_EMBED: "#068ADD",
   },
-}; // Akhir file
+}; // Akhir file 
