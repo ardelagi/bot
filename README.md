@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">
   <br>
   <a href="https://github.com/saiteja-madha"><img src="./docs/.gitbook/assets/logo_transparent.png" height="200" alt="Discord.js v14 Bot"></a>
@@ -159,3 +160,6 @@ If you need any additional help, make sure to read our guides [here](docs/additi
 ## 📝 License
 
 This project is licensed under the [MIT License](LICENSE).
+=======
+# bot
+>>>>>>> a3f74c5b8bd7bc9b90d0bbfdf760b83639788d69
